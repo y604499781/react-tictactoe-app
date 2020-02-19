@@ -19,19 +19,12 @@ class App extends React.Component
   render() 
   {
     return(
+      (this.state.register)?
     let returnComponent;
     const login = <Login users={this.state.users}
       loginUser={() => this.logInUser(true)}/>;
     const game = <Game logOutUser={() => this.logInUser(false)} />;
-    if(!this.state.loggedIn)
-    {
-      returnComponent = login;
-    }
-    else
-    {
-      returnComponent = game;
-    }
-    return returnComponent;
+    
     )
   }
 }
