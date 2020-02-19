@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 class Login extends  React.Component
 {
@@ -11,7 +11,7 @@ class Login extends  React.Component
     {
       if(this.refs.username.value === user.username && 
         this.refs.password.value === user.password)
-        this.props.loginUser();
+        this.props.logInUser();
     }
   }
   render() 
@@ -23,3 +23,4 @@ class Login extends  React.Component
   </div>;
   }
 }
+export default Login;

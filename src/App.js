@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Game from './components/TicTacToe/index.js';
-
+import Login from './components/Login/index.js';
+import Register from './components/Login/index.js';
 
 class App extends React.Component 
 {
@@ -20,11 +21,13 @@ class App extends React.Component
   {
     return(
       (this.state.register)?
-    let returnComponent;
-    const login = <Login users={this.state.users}
-      loginUser={() => this.logInUser(true)}/>;
-    const game = <Game logOutUser={() => this.logInUser(false)} />;
-    
+      <Register />
+      :
+      (!this.state.loggedIn) ?
+      <Login users ={this.state.users}
+      logInUser={() => this.logInUser(true)}/>
+      :
+      <Game logOutUser={() => this.logInUser(false)}/>
     )
   }
 }
